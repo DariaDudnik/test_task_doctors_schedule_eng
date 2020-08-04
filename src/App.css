@@ -1,39 +1,318 @@
+@import url("../src/custom-elements.css");
+@import url("../src/dashboard.css");
+@import url("../src/single-day.css");
+@import url("../src/modal.css");
+
 .App {
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "nav table";
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: 1fr 3fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-line {
+  grid-area: header;
+  background-color: #000002;
+}
+
+.schedule-table {
+  grid-area: table;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 1fr;
+  background-color: #e8e8ea;
+  color: #515153;
+}
+
+.search-bar-date {
+  display: grid;
+  grid-template-areas: 
+  "dateHeader dateHeader"
+  "dateInput  dateButton";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 5fr;
+}
+
+.search-bar-date-title {
+  display: grid;
+  grid-area: dateHeader;
+}
+
+.search-bar-date-calendar {
+  display: grid;
+  grid-area: dateInput;
+}
+
+.search-bar-date-icon {
+  display: grid;
+  grid-area: dateButton;
+  height: 35px;
+}
+
+
+.search-bar-doctors-dropdown{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-bar-doctors-search-input{
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.search-bar-doctors-search-input input{
+  border: none;
+  font-size: 12px;
+}
+
+
+.search-bar-doctors-button {
+  outline: 0;
+  border: none;
+}
+
+.search-bar-doctors-filter-buttons{
+  display: flex;
+}
+
+.search-bar-doctors-filter-buttons form{
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: stretch;
+  border: none;
+}
+
+.search-bar-doctors-filter-buttons form button {
+  border: none;
+  color: black;
+  background: linear, 0 0, 0 100%, from(#515153), to(#EBFFFF);
+  background: -moz-linear-gradient(#515153, #EBFFFF);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar-doctors-filter-buttons button:hover {
+  background-color: #d6d6d6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.filter-button-left{
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.filter-button-right{
+  border-radius: 0 5px 5px 0;
+  outline: none;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.patient-card {
+  display: grid;
+  color: #4d767e;
+  font-size: 14px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+.patient-card p {
+  margin: 0;
+}
+
+.schedule-table-filter {
+  justify-content: space-between!important;
+  padding: 0 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vw;
   align-items: center;
+  justify-items: start;
+  font-size: 20px;
+}
+
+.btn-group.btn-group-vertical {
+  display: inline;
+}
+
+.schedule-table-days {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-gap: 2vw;
+}
+
+.schedule-table-time-box {
+  width: 200px;
+}
+
+input[type=checkbox]:checked + span { font-weight: bold; }
+
+.d-flex {
+  display: flex!important;
+  width: 100%;
+  justify-content: space-between;
+}
+
+d-flex2 {
+  display: flex!important;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+
+:root {
+--primary-color: rgb(116, 202, 116);
+--secondary-color: rgb(226, 226, 226);
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.top-black-border {
+  background: black;
+  height: 4vh;
+}
+
+.my-container {
+  display: flex;
+  /* height: 96vh; */
+  overflow: hidden;
+}
+
+.left-bar-container {
+  background: var(--secondary-color);
+  min-width: 345px;
+  -webkit-box-shadow: 8px 0px 7px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 8px 0px 7px -10px rgba(0,0,0,0.75);
+  box-shadow: 8px 0px 7px -10px rgba(0,0,0,0.75);
+}
+
+.left-bar-container__block__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.5rem 0.6rem 0 1.5rem; 
+  margin-bottom: 0.6rem;
+}
+
+.leftbar-title {
+  text-transform: uppercase;
+
+}
+
+.patient-dropdown {
+  width: 60px;
+}
+
+.patient-button {
+  background: linear-gradient(0deg, rgba(22,148,26,1) 0%, rgba(106,163,23,1) 100%);
+  /* https://cssgradient.io/ */
+  display: flex;
+  align-items: center;
+  border: none;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px solid rgb(170, 170, 170);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.patient-button:disabled {
+  background: var(--primary-color);
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.patient-button:disabled.btn-secondary:hover { 
+  background: var(--primary-color);
+}
+
+.patient-button.btn-secondary:hover {
+  background-color: linear-gradient(0deg, rgba(22,148,26,1) 0%, rgba(106,163,23,1) 100%);
+}
+
+.patient-button.btn-secondary[aria-expanded="true"] {
+  background-color: linear-gradient(0deg, rgba(22,148,26,1) 0%, rgba(106,163,23,1) 100%);
+}
+
+.patient-button.dropdown-toggle::after {
+  vertical-align: 0.5em;
+}
+
+.left-bar-container__block__bottom {
+  padding: 0 0.7rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.leftbar-filter-toggler {
+  width: 100%;
+}
+
+.leftbar-filter-toggler button {
+  margin-top: 1rem;
+  margin-right: 0;
+  margin-left: 0;
+  width: 49%;
+  border: 1px solid rgb(170, 170, 170);
+  background: linear-gradient(0deg, rgba(203,203,203,1) 0%, rgba(241,241,241,1) 100%);
+
+}
+
+.leftbar-filter-toggler .leftbar-filter-toggler__right {
+  float: left;
+  border-right: none;
+  border-radius: 3px 0px 0px 3px;
+  border: 1ps solid rgb(170, 170, 170)
+}
+
+.leftbar-filter-toggler .leftbar-filter-toggler__left {
+  border-radius: 0px 3px 3px 0px;
+  border: 1ps solid rgb(170, 170, 170);
+}
+
+.leftbar-toggler__active {
+  -webkit-box-shadow: inset 0px 4px 15px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 4px 15px -8px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 4px 15px -8px rgba(0,0,0,0.75);
+}
+
+.leftbar-list {
+  background: white;
+  margin: 0 1rem;
+}
+
+.leftbar-list__category {
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 50vh;
+}
+
+.leftbar-list__category-label {
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.leftbar-list__category-item {
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+-------------------------------------------------
+
+.main-container {
+  width: 70%
 }

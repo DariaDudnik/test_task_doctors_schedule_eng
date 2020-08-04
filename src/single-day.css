@@ -1,0 +1,68 @@
+.main-container__schedule-day {
+  margin: 1rem 0 1rem 1rem;
+  border-radius: 0.3rem;
+  min-width: 200px;
+}
+
+.main-container__schedule-day__alert {
+  border: 2px solid tomato;
+  background: rgb(240, 179, 168);
+  border-radius: 0.4rem 0.4rem 0px 0px;
+  -moz-border-radius: 0.4rem 0.4rem 0px 0px;
+  -webkit-border-radius: 0.4rem 0.4rem 0px 0px;
+  height: stretch;
+}
+
+.main-container__schedule-day__alert .schedule-day__activity-title {
+  background: orange;
+}
+
+.main-container__schedule-day__alert .schedule-day__activity-body {
+  background: tomato;
+}
+
+.schedule-day__date {
+  background: rgb(41, 41, 41);
+  color: white;
+  border-radius: 0.3rem 0.3rem 0px 0px;
+  -moz-border-radius: 0.3rem 0.3rem 0px 0px;
+  -webkit-border-radius: 0.3rem 0.3rem 0px 0px;
+  border: 0px solid #000000;
+  text-align: center;
+}
+
+.schedule-day__person {
+  color: white;
+  background: #acacac;
+  text-align: center;
+}
+
+.schedule-day__person-name {
+  border-bottom: 1px solid white;
+}
+
+.schedule-day__activity-main {
+  text-align: center;
+}
+
+.schedule-day__activity-title {
+  background: #81b3ff;
+}
+
+.schedule-day__activity-body {
+  background: var(--primary-color);
+  padding: 0 1rem;
+}
+
+.schedule-day__time {
+  background: var(--secondary-color);
+  padding-left: 0.5rem;
+  border-bottom: 1px dashed grey;
+}
+
+.schedule-day__activity-secondary {
+  background: rgb(155, 155, 155);
+  padding-left: 0.5rem;
+  border-bottom: 1px dashed grey;
+  padding-bottom: 1.5rem;
+}
