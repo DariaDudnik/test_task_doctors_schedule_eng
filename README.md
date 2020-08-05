@@ -4,7 +4,7 @@ This project is a realization of [Test Task](https://docs.google.com/document/d/
 
 In the project directory, you can run:
 
-### `yarn start` OR `npm run start`
+### `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

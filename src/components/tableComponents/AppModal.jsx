@@ -27,6 +27,11 @@ const customStyles = {
     alignItems: "center",
     marginBottom: "2rem",
   },
+  modalHeaderBlockCenter: {
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "2rem",
+  },
   modalHeaderBlockNext: {
     marginRight: "1rem",
     display: "flex"
@@ -41,6 +46,16 @@ const customStyles = {
     alignItems: "center",
     borderBottom: "1px solid grey",
     cursor: "pointer"
+  },
+  modalBodyBlockInfo: {
+    margin: "0 1rem",
+    padding: "0.2rem 0",
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer"
+  },
+  modalBodyBlockInfoData: {
+    flex: "1 1 50%"
   },
   modalBodyBlockNextDiv: {
     marginRight: "1rem"
@@ -117,6 +132,10 @@ const customStyles = {
   declineModalBackLink: {
     textDecoration: "underline",
     textAlign: "center",
+  },
+  textBoldInfo: {
+    fontWeight: "bold",
+    flex: "1 1 50%"
   }
 };
 

@@ -28,23 +28,27 @@ const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData, style }) =>
       ariaHideApp={false}
     >
       <div style={style.modalContainer}>
-        <div style={style.modalHeaderBlock}>
+        <div style={style.modalHeaderBlockCenter}>
           <div style={style.modalHeaderBlockNext}>
             <i className="large material-icons">assignment</i>
             <span style={style.modalHeaderBlockNextSpan}>{patientInfo.patient.name}</span>
           </div>
         </div>
-        <div style={style.modalBodyBlock}>
-          <span>Дата:&ensp;{moment(patientInfo.date).format("DD.MM.YYYY")}</span>
+        <div style={style.modalBodyBlockInfo}>
+          <div style={style.textBoldInfo}>Дата:&ensp;</div>
+          <div style={style.modalBodyBlockInfoData}>{moment(patientInfo.date).format("DD.MM.YYYY")}</div>
         </div>
-        <div style={style.modalBodyBlock}>
-          <span>Врач:&ensp;{currentDoctor.name}</span>
+        <div style={style.modalBodyBlockInfo}>
+          <div style={style.textBoldInfo}>Врач:&ensp;</div>
+          <div style={style.modalBodyBlockInfoData}>{currentDoctor.name}</div>
         </div>
-        <div style={style.modalBodyBlock}>
-          <span>Кабинет:&ensp;{roomNumber}</span>
+        <div style={style.modalBodyBlockInfo}>
+          <div style={style.textBoldInfo}>Кабинет:&ensp;</div>
+          <div style={style.modalBodyBlockInfoData}>{roomNumber}</div>
         </div>
-        <div style={style.modalBodyBlock}>
-          <span>Полис ОМС:&ensp;{patientInfo.patient.healthInsuranceNumber}</span>
+        <div style={style.modalBodyBlockInfo}>
+          <div style={style.textBoldInfo}>Полис ОМС:&ensp;</div>
+          <div style={style.modalBodyBlockInfoData}>{patientInfo.patient.healthInsuranceNumber}</div>
         </div>
       </div>
     </Modal>
