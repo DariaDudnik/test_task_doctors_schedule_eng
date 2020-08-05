@@ -2,21 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Modal from 'react-modal';
 import moment from 'moment';
-import componentStyle from '../../modal.css.js';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
-
-
-const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData }) => {
+const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData, style }) => {
   let data = modalData ? modalData : { 
     startMoment: null,
     rangeString: null,
@@ -35,28 +22,28 @@ const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData }) => {
   return (
     <Modal
       isOpen={openShowAppModal}
-      style={customStyles}
+      style={style}
       onRequestClose={onRequestClose}
       contentLabel="appointmentCancel"
       ariaHideApp={false}
     >
-      <div style={componentStyle.modalContainer}>
-        <div style={componentStyle.modalHeaderBlock}>
-          <div style={componentStyle.modalHeaderBlockNext}>
+      <div style={style.modalContainer}>
+        <div style={style.modalHeaderBlock}>
+          <div style={style.modalHeaderBlockNext}>
             <i className="large material-icons">assignment</i>
-            <span style={componentStyle.modalHeaderBlockNextSpan}>{patientInfo.patient.name}</span>
+            <span style={style.modalHeaderBlockNextSpan}>{patientInfo.patient.name}</span>
           </div>
         </div>
-        <div style={componentStyle.modalBodyBlock}>
+        <div style={style.modalBodyBlock}>
           <span>Дата:&ensp;{moment(patientInfo.date).format("DD.MM.YYYY")}</span>
         </div>
-        <div style={componentStyle.modalBodyBlock}>
+        <div style={style.modalBodyBlock}>
           <span>Врач:&ensp;{currentDoctor.name}</span>
         </div>
-        <div style={componentStyle.modalBodyBlock}>
+        <div style={style.modalBodyBlock}>
           <span>Кабинет:&ensp;{roomNumber}</span>
         </div>
-        <div style={componentStyle.modalBodyBlock}>
+        <div style={style.modalBodyBlock}>
           <span>Полис ОМС:&ensp;{patientInfo.patient.healthInsuranceNumber}</span>
         </div>
       </div>

@@ -10,15 +10,17 @@ const GroupedByTypeList =({ data, name, handleDoctorSelect, handleAllCheckByType
 
     return (
       <label htmlFor="category" className="leftbar-list__category-label">
-        <input
-          id="category"
-          type='checkbox'
-          name="doctors-check"
-          className="doctors-checkbox-header"
-          checked={allChecked}
-          onChange={() => handleAllCheckByType(childrenIds, !allChecked)}
-        />
-        <span>{name}</span>
+        <div className="text-left">
+          <input
+            id="category"
+            type='checkbox'
+            name="doctors-check"
+            className="doctors-checkbox-name"
+            checked={allChecked}
+            onChange={() => handleAllCheckByType(childrenIds, !allChecked)}
+          />
+          <span>{name}</span>
+        </div>
         {
           list && list.map(doctor => (
             <DoctorLine key={doctor.id} doctor={doctor} handleDoctorSelect={handleDoctorSelect} />

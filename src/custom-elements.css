@@ -1,5 +1,6 @@
 .custom-input-container {
   display: flex;
+  height: 2rem;
 }
 
 .custom-input-container input {

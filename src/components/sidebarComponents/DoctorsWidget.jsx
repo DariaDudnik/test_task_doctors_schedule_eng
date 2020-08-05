@@ -70,7 +70,7 @@ const DoctorsWidget = () => {
           <span>{numberOfCheckedDoctors}/{list.length}</span>
           <div className="dropdown patient-dropdown">
             <button 
-              className="btn btn-secondary btn-sm dropdown-toggle patient-button"
+              className="btn btn-secondary dropdown-toggle patient-button"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
