@@ -18,7 +18,7 @@ const DaysFilter = () => {
   return (
     <ButtonToolbar className="schedule-table-filter" >
     <div>Расписание специалистов</div>
-      <ButtonGroup >
+      <ButtonGroup>
         <Button
           value={0}
           variant="success"

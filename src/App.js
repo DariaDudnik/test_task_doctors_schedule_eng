@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import HeaderLine from './components/HeaderLine';
 import ScheduleTable from './components/tableComponents/ScheduleTable';
 import SearchSideBar from './components/sidebarComponents/SearchSideBar';

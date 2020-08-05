@@ -16,6 +16,9 @@ const customStyles = {
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)'
   },
+  overlay: {
+    zIndex: "10"
+  },
   modalContainer: {
     color: "darkblue"
   },
@@ -37,6 +40,7 @@ const customStyles = {
     display: "flex",
     alignItems: "center",
     borderBottom: "1px solid grey",
+    cursor: "pointer"
   },
   modalBodyBlockNextDiv: {
     marginRight: "1rem"
@@ -188,6 +192,7 @@ const AppModal = ({ handleClose, show, modalData }) => {
           <div style={customStyles.modalBodyBlock} disabled={isDisabledToCancel}>
             <div style={customStyles.modalBodyBlockNextDiv}><i className="large material-icons">assignment</i></div>
             <span
+            style={isDisabledToCancel ? customStyles.disabled : {}}
             onClick={() => handleAppShow()}
             > 
             Просмотреть запись

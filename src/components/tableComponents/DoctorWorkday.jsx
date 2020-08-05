@@ -117,7 +117,7 @@ const DoctorWorkday = ({ doctor, day }) => {
 
   return (
     <div >
-      <article className="main-container__schedule-day" >
+      <article className="main-container__schedule-day">
         <div  className="schedule-day__date"><Moment locale="ru" format="ddd. DD MMM" date={day} /></div>
         <div className="schedule-day__person">
           <div className="schedule-day__person-name">{doctor.name}</div>
