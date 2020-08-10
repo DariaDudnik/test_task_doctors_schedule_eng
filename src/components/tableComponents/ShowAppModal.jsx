@@ -12,12 +12,13 @@ const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData, style }) =>
 
   let patientInfo = data.fillStatus[0] ? data.fillStatus[0] : {
     patient: {
-      name: null,
+      name: 'null',
     },
     date: moment(),
   };
   const currentDoctor = useSelector(state => state.doctors.currentDoctor);
-  const roomNumber = currentDoctor.room ? currentDoctor.room.slice(2) : '';
+
+console.log(patientInfo, 'asdasdas!!!')
 
   return (
     <Modal
@@ -35,19 +36,19 @@ const ShowAppModal = ({ openShowAppModal, onRequestClose, modalData, style }) =>
           </div>
         </div>
         <div style={style.modalBodyBlockInfo}>
-          <div style={style.textBoldInfo}>Дата:&ensp;</div>
+          <div style={style.textBoldInfo}>Date:&ensp;</div>
           <div style={style.modalBodyBlockInfoData}>{moment(patientInfo.date).format("DD.MM.YYYY")}</div>
         </div>
         <div style={style.modalBodyBlockInfo}>
-          <div style={style.textBoldInfo}>Врач:&ensp;</div>
+          <div style={style.textBoldInfo}>Doctor:&ensp;</div>
           <div style={style.modalBodyBlockInfoData}>{currentDoctor.name}</div>
         </div>
         <div style={style.modalBodyBlockInfo}>
-          <div style={style.textBoldInfo}>Кабинет:&ensp;</div>
-          <div style={style.modalBodyBlockInfoData}>{roomNumber}</div>
+          <div style={style.textBoldInfo}>Room:&ensp;</div>
+          <div style={style.modalBodyBlockInfoData}>{currentDoctor.room}</div>
         </div>
         <div style={style.modalBodyBlockInfo}>
-          <div style={style.textBoldInfo}>Полис ОМС:&ensp;</div>
+          <div style={style.textBoldInfo}>Health insurance number:&ensp;</div>
           <div style={style.modalBodyBlockInfoData}>{patientInfo.patient.healthInsuranceNumber}</div>
         </div>
       </div>

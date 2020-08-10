@@ -206,7 +206,7 @@ const AppModal = ({ handleClose, show, modalData }) => {
         <div className="modal-container">
           <div style={customStyles.modalHeaderBlock}>
             <div style={customStyles.modalHeaderBlockNext}><i className="large material-icons">access_time</i></div>
-            <span style={customStyles.modalHeaderBlockNextSpan}>Выбран интервал времени<br />{data.rangeString}</span>
+            <span style={customStyles.modalHeaderBlockNextSpan}>Selected time interval<br />{data.rangeString}</span>
           </div>
           <div style={customStyles.modalBodyBlock} disabled={isDisabledToCancel}>
             <div style={customStyles.modalBodyBlockNextDiv}><i className="large material-icons">assignment</i></div>
@@ -214,7 +214,7 @@ const AppModal = ({ handleClose, show, modalData }) => {
             style={isDisabledToCancel ? customStyles.disabled : {}}
             onClick={() => handleAppShow()}
             > 
-            Просмотреть запись
+            Show the appointment
             </span>
           </div>
           <div style={customStyles.modalBodyBlock} disabled={isDisabledToCreate}>
@@ -223,7 +223,7 @@ const AppModal = ({ handleClose, show, modalData }) => {
               style={isDisabledToCreate ? customStyles.disabled : customStyles.modalBodyCreateSpan}
               onClick={() => handleAppCreation()}
               >
-                Создать запись
+                Create an appointment
             </span>
             </div>
           <div style={customStyles.modalBodyBlock} disabled={isDisabledToCancel}>
@@ -232,7 +232,7 @@ const AppModal = ({ handleClose, show, modalData }) => {
               style={isDisabledToCancel ? customStyles.disabled : customStyles.modalBodyCancelSpan}
               onClick={() => handleAppCancellation()}
               >
-                Отменить запись
+                Cancel the appointment
                 </span>
             </div>
         </div>

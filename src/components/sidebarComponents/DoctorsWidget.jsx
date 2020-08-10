@@ -60,13 +60,13 @@ const DoctorsWidget = () => {
       {doctor.name}({doctor.type})
     </Dropdown.Item>))
 
-  const nothingFound = <Dropdown.Item>Ничего не найдено</Dropdown.Item>
+  const nothingFound = <Dropdown.Item>No matches</Dropdown.Item>
 
   return (
     <div>
       <div className="left-bar-container__block__top">
         <div className="d-flex">
-          <h5 className="mr-1 leftbar-title">Специалисты</h5>
+          <h5 className="mr-1 leftbar-title">Specialists</h5>
           <span>{numberOfCheckedDoctors}/{list.length}</span>
           <div className="dropdown patient-dropdown">
             <button 
@@ -85,14 +85,14 @@ const DoctorsWidget = () => {
                 disabled={allChecked}
               >
                 <FontAwesomeIcon icon={faCheck} />
-                Выбрать все
+                Select all
               </button>
               <button className="dropdown-item" href="#"
                 onClick={(e) => handleRemoveCheckAll(e)}
                 disabled={!allChecked}
                 >
                   <FontAwesomeIcon icon={faTimes} />
-                  Отменить все выбранные
+                  Deselect all
               </button>
             </div>
           </div>
@@ -102,7 +102,7 @@ const DoctorsWidget = () => {
         <div className="custom-input-container">
           <input
             type="text"
-            placeholder="Введите текст для поиска"
+            placeholder="Type to find..."
             onChange={handleSearch}
             value={searchTerm}
           />
@@ -116,13 +116,13 @@ const DoctorsWidget = () => {
             onClick={() => setGroupedByType(false)}
             className={`leftbar-filter-toggler__right ${!groupedByType ? 'leftbar-toggler__active' : ''}`}
           >
-            По алфавиту
+            Alphabetically
           </button>
           <button
             className={`leftbar-filter-toggler__left ${groupedByType ? 'leftbar-toggler__active' : ''}`}
             onClick={() => setGroupedByType(true)}
           >
-            По специальностям
+            By type
           </button>
         </div>
       </div>

@@ -46,12 +46,12 @@ const SearchWidget = () => {
     </Dropdown.Item>
   ));
 
-  const nothingFound = <Dropdown.Item>Ничего не найдено</Dropdown.Item>;
+  const nothingFound = <Dropdown.Item>Nothing found</Dropdown.Item>;
 
   return (
     <div className="left-bar-container__block">
       <div className="left-bar-container__block__top">
-        <h5 className="leftbar-title">Пациент</h5>
+        <h5 className="leftbar-title">Patient</h5>
         <PatientDropdown
           className="btn btn-secondary btn-sm dropdown-toggle patient-button"
           id="dropdownMenuButton"
@@ -63,7 +63,7 @@ const SearchWidget = () => {
             <div className="custom-input-container">
               <input
                 type="text"
-                placeholder="Введите текст для поиска"
+                placeholder="Type to find..."
                 aria-label="текст для поиска"
                 aria-describedby="basic-addon2"
                 onChange={handleChange}

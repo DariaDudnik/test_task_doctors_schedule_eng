@@ -28,18 +28,18 @@ const CancelAppModal = ({ showModalCancel, onRequestClose, handleSuccessClose, s
       <div style={style.declineModal}>
         <div style={style.declineModalTitle}>
           <i style={style.declineModalTitleIcon} className="large material-icons">error</i>
-          <span>Отмена записи</span>
+          <span>Appointment cancellation</span>
         </div>
         <div style={style.declineModalText}>
-          Врач и пациент будут уведомлены об отмене записи.
+          Doctor and patient will be informed about the cancellation.
         </div>
         <button
           style={style.declineModalButton}
           onClick={confirmCancellation}
         >
-          Отменить
+          Cancel
         </button>
-        <div style={style.declineModalBackLink} onClick={handleSuccessClose}>Вернуться к расписанию</div>
+        <div style={style.declineModalBackLink} onClick={handleSuccessClose}>Back to the schedule</div>
       </div>
     
     </Modal>

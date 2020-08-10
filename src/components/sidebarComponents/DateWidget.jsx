@@ -3,16 +3,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch, useSelector } from 'react-redux';
 import "react-datepicker/dist/";
-import { registerLocale } from  "react-datepicker";
-import ru from 'date-fns/locale/ru';
 import addMonths from 'date-fns/addMonths'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { selectDate, toggleCalendar } from '../../redux/actions/scheduleActions';
-
-
-
-registerLocale('ru', ru);
 
 const DateWidget = () => {
   const selectedDate = useSelector(state => state.schedule.currentDate);
@@ -22,7 +16,7 @@ const DateWidget = () => {
   return (
     <div className="left-bar-container__block">
       <div className="left-bar-container__block__top">
-      <h5 className="leftbar-title">Дата записи</h5>
+      <h5 className="leftbar-title">Appointment date</h5>
     </div>
       <div className="input-group left-bar-container__block__bottom">
         <DatePicker
@@ -33,8 +27,7 @@ const DateWidget = () => {
           maxDate={addMonths(new Date(), 5)}
           calendarClassName="rasta-stripes"
           dropdownMode="select"
-          placeholderText='ДД.ММ.ГГГГ'
-          locale='ru'
+          placeholderText='DD.ММ.YYYY'
           showDisabledMonthNavigation
           className="search-bar-date-calendar"
           open={datePickerIsOpen}

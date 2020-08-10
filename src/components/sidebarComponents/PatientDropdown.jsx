@@ -24,7 +24,7 @@ const PatientDropdown = () => {
         onClick={() => handlePatientRemove()}
         >
           <FontAwesomeIcon icon={faPowerOff} />
-            Завершить работу с пациентом
+            Close patient's card
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

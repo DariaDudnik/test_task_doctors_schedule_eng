@@ -2,38 +2,38 @@
     "patients": [
         {
             "id": 1,
-            "name": "Иванов Иван Иванович",
+            "name": "Ivanov Ivan Ivanovich",
             "birthDate": "11.11.2011",
             "healthInsuranceNumber": "1111111111111111"
         },
         {
             "id": 2,
-            "name": "Алексеев Алексей Алексеевич",
+            "name": "Alekseev Aleksey Alekseevich",
             "birthDate": "22.12.1922",
             "healthInsuranceNumber": "2222222222222222"
         },
         {
             "id": 3,
-            "name": "Алексеев Петр Валерьевич",
+            "name": "Alekssev Petr Valerievich",
             "birthDate": "22.12.1922",
             "healthInsuranceNumber": "2223222222222222"
         },
         
         {
             "id": 3,
-            "name": "Петров Петр Петрович",
+            "name": "Petrov Petr Petrovich",
             "birthDate": "01.01.1990",
             "healthInsuranceNumber": "3333333333333333"
         },
         {
             "id": 4,
-            "name": "Сергеев Сергей Сергеевич",
+            "name": "Sergeev Sergey Sergeevich",
             "birthDate": "02.02.2002",
             "healthInsuranceNumber": "4444444444444444"
         },
         {
             "id": 5,
-            "name": "Васильев Василий Васильевич",
+            "name": "Vasiliev Vasiliy Vasilievich",
             "birthDate": "09.09.1949",
             "healthInsuranceNumber": "5555555555555555"
         }

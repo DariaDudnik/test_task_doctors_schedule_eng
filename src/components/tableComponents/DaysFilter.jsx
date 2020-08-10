@@ -17,26 +17,26 @@ const DaysFilter = () => {
 
   return (
     <ButtonToolbar className="schedule-table-filter" >
-    <div>Расписание специалистов</div>
+    <div>Specialists schedule</div>
       <ButtonGroup>
         <Button
           value={0}
           variant="success"
           onClick={(e) => handleTimeRange(e)}
           active={activeButton === 0}
-          >1 день</Button>
+          >1 day</Button>
         <Button
           value={1}
           variant="success"
           onClick={(e) => handleTimeRange(e)}
           active={activeButton === 1}
-          >2 дня</Button>
+          >2 days</Button>
         <Button 
           variant="success"
           value={6}
           onClick={(e) => handleTimeRange(e)} 
           active={activeButton === 6}
-          >Неделя
+          > A week
         </Button>
       </ButtonGroup>
     </ButtonToolbar>

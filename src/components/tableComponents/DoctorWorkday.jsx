@@ -28,16 +28,16 @@ const AppointmentTime = ({ fillStatus, rangeString, startMoment, showModal }) =>
       return (<div className="schedule-day__time" key={index} onClick={handleClick}>{shortDate}{shortName}</div>)
     }
     if(slot.appointmentType === appointmentTypes.STUDY) {
-      return (<div key={index} className="schedule-day__activity-secondary">Обучение</div>)
+      return (<div key={index} className="schedule-day__activity-secondary">Studing</div>)
     }
     if(slot.appointmentType === appointmentTypes.PAPERWORK) {
-      return (<div key={index} className="schedule-day__activity-secondary">Работа с документами</div>)
+      return (<div key={index} className="schedule-day__activity-secondary"> Work with documents</div>)
     }
     if(slot.appointmentType === appointmentTypes.OFF) {
-      return (<div key={index} className="schedule-day__activity-secondary">Врач не работает</div>)
+      return (<div key={index} className="schedule-day__activity-secondary">Doctor is off</div>)
     }
     if(slot.appointmentType === appointmentTypes.NOAPP) {
-      return (<div key={index} className="schedule-day__activity-secondary">Врач не принимает</div>)
+      return (<div key={index} className="schedule-day__activity-secondary">Doctor doesn't accept patients</div>)
     }
 
     return( <div key={index} className="schedule-day__activity-secondary">":"</div>)
@@ -118,14 +118,14 @@ const DoctorWorkday = ({ doctor, day }) => {
   return (
     <div >
       <article className="main-container__schedule-day">
-        <div  className="schedule-day__date"><Moment locale="ru" format="ddd. DD MMM" date={day} /></div>
+        <div  className="schedule-day__date"><Moment format="ddd. DD MMM" date={day} /></div>
         <div className="schedule-day__person">
           <div className="schedule-day__person-name">{doctor.name}</div>
           <div className="schedule-day__person-position">{doctor.type}</div>
         </div>
 
         <div className="schedule-day__activity-main">
-          <div className="schedule-day__activity-title">{doctor.room}</div>
+          <div className="schedule-day__activity-title">room {doctor.room}</div>
           <div className="schedule-day__activity-body">{doctor.start}-{doctor.end}</div>
         </div>
         <div  className="schedule-day__time">

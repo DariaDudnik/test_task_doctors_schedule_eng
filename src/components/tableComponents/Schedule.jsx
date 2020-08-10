@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Moment from 'react-moment';
 import MomentA from 'moment';
-import 'moment/locale/ru';
 import { extendMoment } from 'moment-range';
 import WeekdayGroup from './WeekdayGroup'
 
@@ -24,7 +23,7 @@ const Schedule = () => {
           <WeekdayGroup key={day.format('MMM Do YY')} day={day} />
         )
         :
-        <div className="empty-data">Для просмотра расписания выберите хотя бы один Доступный ресурс</div>
+        <div className="empty-data">To view the schedule, select at least one Available resource</div>
       }
     </div>
   )

@@ -15,7 +15,7 @@ const DoctorLine = ({ doctor: { id, name, checked, room, type }, handleDoctorSel
         checked={checked}
         onChange={() => handleDoctorSelect(id)}
       />
-      {listType ? <span>{name}({type}, {room})</span> : <span>{name}</span>}
+      {listType ? <span>{name}({type}, r.{room})</span> : <span>{name}</span>}
     </li>
   </div>
 )
