@@ -1,9 +1,42 @@
 {
-    "extends": "airbnb",
-    "plugins": ["react"],
-    "parserOptions": {
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
       "ecmaFeatures": {
-        "jsx": true
+          "jsx": true
+      },
+      "ecmaVersion": 6,
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "react-hooks"
+  ],
+  "rules": {
+      "react/jsx-filename-extension": 0,
+      "react/prop-types": 0,
+      "react/destructuring-assignment": 0,
+      "react/button-has-type": 0,
+      "react/sort-comp": 0,
+      "jsx-a11y/alt-text": "off",
+      "jsx-a11y/click-events-have-key-events": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": 0,
+      "no-continue": 0,
+      "eslint-disable-next-line": 0,
+      "react/jsx-no-target-blank": 0
+  },
+  "settings": {
+      "react": {
+          "version": "16.7"
       }
-    }
   }
+}

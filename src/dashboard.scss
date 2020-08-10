@@ -1,13 +1,15 @@
 
 .scroll-container {
-	display: flex;
   border-top: 1px solid rgb(170, 170, 170);
+  display: flex;
   overflow-y: auto;
+
   .main-container__schedule {
     display: flex;
   }
+
   .empty-data {
-    width: 100%;
     align-self: center;
+    width: 100%;
   }
 }
